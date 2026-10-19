@@ -6,12 +6,12 @@
 
 ## Публикация в GitHub Pages
 
-1. Создайте репозиторий `fot-practice-km` и загрузите содержимое этой папки в ветку `main`, включая `.github/workflows/pages.yml`. Для бесплатного GitHub Pages используйте публичный репозиторий.
+1. Создайте репозиторий `fot-manager-training` и загрузите содержимое этой папки в ветку `main`, включая `.github/workflows/pages.yml`. Для бесплатного GitHub Pages используйте публичный репозиторий.
 2. В репозитории откройте **Settings → Pages → Build and deployment → Source** и выберите **GitHub Actions**.
 3. Откройте **Actions → Publish GitHub Pages → Run workflow → main → Run workflow**. После успешной публикации ссылка появится в задании `deploy` и в **Settings → Pages**.
 4. Следующие изменения в `main` будут публиковаться автоматически.
 
-Обычный адрес проекта: `https://USERNAME.github.io/fot-practice-km/`. Сборка автоматически использует путь, который сообщает GitHub Pages: подойдут другое имя репозитория, корневой сайт `USERNAME.github.io` и собственный домен.
+Адрес проекта: https://ekaterinashliakhova.github.io/fot-manager-training/ . Сборка автоматически использует путь, который сообщает GitHub Pages: подойдут другое имя репозитория, корневой сайт `USERNAME.github.io` и собственный домен.
 
 ## Локальная проверка
 
@@ -27,11 +27,11 @@ python -m http.server 8000 --directory _site
 Для проверки адреса с именем репозитория:
 
 ```sh
-python scripts/build_pages.py --base-path /fot-practice-km/ --output preview/fot-practice-km
+python scripts/build_pages.py --base-path /fot-manager-training/ --output preview/fot-manager-training
 python -m http.server 8000 --directory preview
 ```
 
-Откройте `http://localhost:8000/fot-practice-km/`. Изменяйте файлы в `dist/`, затем запускайте сборку заново. `_site/` — результат сборки, его не нужно коммитить.
+Откройте `http://localhost:8000/fot-manager-training/`. Изменяйте файлы в `dist/`, затем запускайте сборку заново. `_site/` — результат сборки, его не нужно коммитить.
 
 ## Что входит в проект
 
