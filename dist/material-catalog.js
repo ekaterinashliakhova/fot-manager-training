@@ -189,6 +189,7 @@ export const presentations=[
     "description": "Зарплатный проект Сбера и предложения других банков: условия для компаний и сотрудников, обслуживание карт, бонусы и финансовые продукты. Поможет выбрать параметры для сравнения и подготовить аргументы к переговорам.",
     "url": "/assets/materials/bank-comparison.pdf",
     "preview": "/assets/materials/bank-comparison.webp",
+    "asOf": "октябрь 2026",
     "pages": 5
   },
   {
@@ -197,6 +198,7 @@ export const presentations=[
     "description": "Презентация о выгодах для получателей зарплаты на карту Сбера: СберПрайм Зарплатный, бонусы, переводы, кредиты, ипотека и сервисы для жизни. Используйте, чтобы разобраться в предложении для сотрудников.",
     "url": "/assets/materials/payroll-conditions.pdf",
     "preview": "/assets/materials/payroll-conditions.webp",
+    "asOf": "октябрь 2026",
     "pages": 14
   }
 ];

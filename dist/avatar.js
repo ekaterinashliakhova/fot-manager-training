@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {createFox} from './fox-character.js?v=20261019-1';
+import {createFox} from './fox-character.js?v=20261020-1';
 const casePoses={
  '01':{yaw:0,pitch:.38,left:2.65,right:2.65},
  '02':{yaw:.55,pitch:.22,left:0,right:2.1},
@@ -10,7 +10,7 @@ const casePoses={
 };
 export async function initAvatar(options={}){
  const story=options.mode==='story',container=options.container||document.getElementById('avatar'),stage=story?container:document.querySelector('.orbit-stage');if(!container||!stage)return;
- const poster=()=>{container.innerHTML='<img src="/assets/fox-poster.png?v=20261019-1" alt="Лисичка" class="avatar-poster">'};
+ const poster=()=>{container.innerHTML='<img src="/assets/fox-poster.png?v=20261020-1" alt="Лисичка" class="avatar-poster">'};
  let renderer;try{renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'})}catch{poster();return {destroy(){}}}
  renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setSize(container.clientWidth,container.clientHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.02;container.appendChild(renderer.domElement);
  const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(34,1,.1,40);
