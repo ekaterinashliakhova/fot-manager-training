@@ -1,8 +1,8 @@
-import {mmbMaterialGroups,mmbMaterials} from './mmb-materials.js?v=20261020-1';
-import {currentSegment} from './segments.js?v=20261020-1';
-import {rgsSystemMaterials} from './rgs-materials.js?v=20261020-1';
-import {caseUrl} from './business-data.js?v=20261020-1';
-import {materialGroups,kksbResources,presentations} from './material-catalog.js?v=20261020-1';
+import {mmbMaterialGroups,mmbMaterials} from './mmb-materials.js?v=20261021-1';
+import {currentSegment} from './segments.js?v=20261021-1';
+import {rgsSystemMaterials} from './rgs-materials.js?v=20261021-1';
+import {caseUrl} from './business-data.js?v=20261021-1';
+import {materialGroups,kksbResources,presentations} from './material-catalog.js?v=20261021-1';
 const rgsLinks=[
  {id:'rgs-payroll',description:"Актуальные тарифы, стандарт зарплатного проекта и привилегии для сотрудников госсектора. Сверьте условия перед встречей с закреплённым МЗП.",title:'СберХелп · зарплатный проект РГС',access:'Внутренний ресурс',url:'https://sberhelp.sberbank.ru/sberhelp/page/2b641086-a720-4b6d-b05d-af747d3aa89a'},
  {id:'rgs-sales',description:"Порядок отработки лида: изучить карточку в ЕФС.Наш бизнес, взять лид в работу и включить МЗП в продажу.",title:'СберХелп · отработка лида',access:'Внутренний ресурс',url:'https://sberhelp.sberbank.ru/sberhelp/page/e2f984d4-7775-42c7-9b55-2f92b86f7556'},

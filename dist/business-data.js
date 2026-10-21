@@ -1,5 +1,5 @@
-import {businessCases} from './business-cases.js?v=20261020-1';
-import {currentSegment} from './segments.js?v=20261020-1';
+import {businessCases} from './business-cases.js?v=20261021-1';
+import {currentSegment} from './segments.js?v=20261021-1';
 export const scenario=businessCases[currentSegment().id];
 export const caseUrl=`/cases/${scenario.id}/`;
 export const attemptKey=`fot-${scenario.id}-attempt`;

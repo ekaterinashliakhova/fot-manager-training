@@ -1,5 +1,5 @@
-import {scenario,quizPassed} from './business-data.js?v=20261020-1';
-import {presentations} from './material-catalog.js?v=20261020-1';
+import {scenario,quizPassed} from './business-data.js?v=20261021-1';
+import {presentations} from './material-catalog.js?v=20261021-1';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const preparationDownloads=()=>`<div class="preparation-downloads"><strong>Материалы собраны — возьмите их с собой</strong>${presentations.map(p=>`<a href="${p.url}" download="${esc(p.title)}.pdf">${esc(p.title)} <small class="presentation-date">Актуальность: ${esc(p.asOf)}</small><span>Скачать PDF ↓</span></a>`).join('')}</div>`;
 export function openMemory(game,q){
