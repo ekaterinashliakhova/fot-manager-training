@@ -47,7 +47,7 @@ export default {async fetch(request,env={},ctx={}){
  let path=url.pathname;if(path.endsWith('/'))path+='index.html';
  if(Object.hasOwn(TEXT_ASSETS,path)){const asset=TEXT_ASSETS[path];return new Response(request.method==='HEAD'?null:asset.body,{headers:{'Content-Type':asset.type,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'}})}
  if(BINARY_ASSETS.includes(path)){
-  try{const target=new URL('/fot-manager-training'+path,PAGES_ORIGIN);const upstream=await fetch(target,{redirect:'error'});const headers=new Headers(upstream.headers);headers.delete('set-cookie');headers.set('X-Content-Type-Options','nosniff');headers.set('Cache-Control','public, max-age=3600');return new Response(request.method==='HEAD'?null:upstream.body,{status:upstream.status,headers})}catch{return new Response('Asset unavailable',{status:502})}
+  try{const target=new URL('/fot-manager-training'+path,PAGES_ORIGIN);const upstream=await fetch(target.href,{redirect:'manual'});const headers=new Headers(upstream.headers);headers.delete('set-cookie');headers.set('X-Content-Type-Options','nosniff');headers.set('Cache-Control','public, max-age=3600');return new Response(request.method==='HEAD'?null:upstream.body,{status:upstream.status,headers})}catch(error){console.error('media-fetch',String(error?.message||error));return new Response('Asset unavailable',{status:502})}
  }
  return new Response('Страница не найдена',{status:404,headers:{'Content-Type':'text/plain; charset=utf-8'}});
 }};
