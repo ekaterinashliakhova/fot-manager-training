@@ -1,7 +1,7 @@
-import {scenario,caseUrl,attemptKey,total,readAttempt,quizPassed} from './business-data.js?v=20261021-1';
-import {linksMarkup} from './training-links.js?v=20261021-1';
-import {openMemory,openBonusQuiz,preparationDownloads} from './business-extras.js?v=20261021-1';
-import {kksbResources} from './material-catalog.js?v=20261021-1';
+import {scenario,caseUrl,attemptKey,total,readAttempt,quizPassed} from './business-data.js?v=20261021-2';
+import {linksMarkup} from './training-links.js?v=20261021-2';
+import {openMemory,openBonusQuiz,preparationDownloads} from './business-extras.js?v=20261021-2';
+import {kksbResources} from './material-catalog.js?v=20261021-2';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 class BusinessGame{
@@ -32,7 +32,7 @@ class BusinessGame{
  this.titleObserver?.disconnect();const title=this.main.querySelector('.novel-scene-title');this.titleObserver=new ResizeObserver(()=>this.updatePortraitTop());this.titleObserver.observe(title);
  this.main.querySelector('#dismiss-case-update')?.addEventListener('click',()=>{delete this.data.updateNotice;this.save();this.main.querySelector('.case-update-notice')?.remove()});
  this.main.querySelector('#game-restart').onclick=()=>this.restart(true);this.main.querySelector('#game-back').onclick=()=>this.back();this.main.querySelector('#game-client').onclick=()=>this.cards(true);this.main.querySelector('#kksb-open-resources').onclick=()=>this.resources();
- import('./avatar.js?v=20261021-1').then(m=>token===this.renderToken?m.initAvatar({mode:'story',container:this.main.querySelector('.robot-model')}):null).then(c=>{if(token!==this.renderToken){c?.destroy();return}this.controller=c}).catch(()=>{if(token!==this.renderToken)return;const slot=this.main.querySelector('.robot-model');if(slot)slot.innerHTML='<img class="avatar-poster" src="/assets/fox-poster.png?v=20261021-1" alt="">'});
+ import('./avatar.js?v=20261021-2').then(m=>token===this.renderToken?m.initAvatar({mode:'story',container:this.main.querySelector('.robot-model')}):null).then(c=>{if(token!==this.renderToken){c?.destroy();return}this.controller=c}).catch(()=>{if(token!==this.renderToken)return;const slot=this.main.querySelector('.robot-model');if(slot)slot.innerHTML='<img class="avatar-poster" src="/assets/fox-poster.png?v=20261021-2" alt="">'});
  this.render();if(scenario.bonusQuiz&&this.data.quiz&&!quizPassed(this.data)&&scenario.questions[this.data.index].bonusAfter)openBonusQuiz(this);
  }
  render(){
