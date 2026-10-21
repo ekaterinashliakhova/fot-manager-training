@@ -1,7 +1,7 @@
 import {trainingLinks,linksMarkup,renderTrainingLinks} from './training-links.js?v=20261021-2';
 import {currentSegment,completionKey} from './segments.js?v=20261021-2';
 import {scenario,caseUrl,total,businessProgress} from './business-data.js?v=20261021-2';
-import {renderBusinessCase} from './business-game.js?v=20261021-2';
+import {renderBusinessCase} from './business-game.js?v=20261021-5';
 import {initInteractions} from './interactions.js?v=20261021-2';
 const segment=currentSegment(),main=document.querySelector('#main'),menu=document.querySelector('#menu-button'),siteNav=document.querySelector('#site-nav');
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
