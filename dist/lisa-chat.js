@@ -37,7 +37,7 @@ export function initLisaChat(){
  const reveal=createTextReveal(value=>{
   const pinned=nearBottom();
   if(!article&&value){
-   list.querySelector('.lisa-thinking')?.remove();article=document.createElement('article');article.className='lisa-message is-assistant is-streaming';article.setAttribute('aria-busy','true');
+   seenMessages.add(c.id+':'+reply.at+':'+reply.role);list.querySelector('.lisa-thinking')?.remove();article=document.createElement('article');article.className='lisa-message is-assistant is-streaming';article.setAttribute('aria-busy','true');
    const name=document.createElement('span');name.textContent='Лиса';replyText=document.createElement('div');article.append(name,replyText);list.append(article);
   }
   if(replyText)replyText.textContent=value;if(pinned)list.scrollTop=list.scrollHeight;
