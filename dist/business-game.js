@@ -1,5 +1,5 @@
 import {feedbackConfirmed,awaitingFeedback} from './feedback-state.js?v=20261022-3';
-import {completionCounterMarkup,feedbackMarkup,initCompletion} from './completion.js?v=20261022-5';
+import {completionCounterMarkup,feedbackMarkup,initCompletion} from './completion.js?v=20261022-6';
 import {scenario,caseUrl,attemptKey,total,readAttempt,quizPassed} from './business-data.js?v=20261021-2';
 import {linksMarkup} from './training-links.js?v=20261022-5';
 import {openMemory,openBonusQuiz,preparationDownloads} from './business-extras.js?v=20261021-2';
