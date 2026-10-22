@@ -22,7 +22,7 @@ def build(base_path: str, output: Path) -> None:
     # Match only local URL prefixes. Do not rewrite SVG markup, external URLs,
     # source-map comments, relative ES imports, or the bundled Three.js library.
     rooted_url = re.compile(
-        r'''(["'`])/(?=assets/|cases/|learn/|materials(?:/|["'`])|final(?:/|["'`])|style\.css|fonts\.css|entry\.js|lisa-chat\.css|[?#]|["'`])'''
+        r'''(["'`])/(?=assets/|cases/|learn/|materials(?:/|["'`])|final(?:/|["'`])|style\.css|fonts\.css|entry\.js|[?#]|["'`])'''
     )
     for file in output.rglob("*"):
         if file.suffix not in {".html", ".js", ".css"} or "assets" in file.relative_to(output).parts:
